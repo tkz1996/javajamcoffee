@@ -1,0 +1,55 @@
+body {
+	background-color: rgb(255,255,204);
+}
+
+#wrapper {
+	background-color: rgb(204,170,102);
+	text-align:center;
+	margin: auto;
+	width: 80%;
+	min-width: 800px;
+}
+
+#leftcolumn {
+	background-color: rgb(226,210,176);
+	margin: auto;
+	float: left;
+	width: 155px;
+	text-align: center;
+	position: relative;
+	height: 250px;
+}
+
+nav ul {
+	list-style-type: none;
+	font-family: Arial;
+	font-weight: bold;
+	padding: 0px;
+}
+
+#rightcolumn {
+	background-color: #FFFFFF;
+	margin-left: 155px;
+	height: 250px;
+}
+
+#homepic {
+	float: left;
+	padding: 25px;
+	margin-left: 45px;
+}
+
+#contenttitle {
+	text-align: left;
+	font-size: 150%;
+	font-family: Arial;
+	font-weight: bold;
+	color: #883300;
+	margin: 0px;
+	margin-left: 30px;
+	padding-top: 10px;
+}
+
+h1 {
+	margin: 0px;
+}

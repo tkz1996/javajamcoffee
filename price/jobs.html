@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+    <title>JavaJam Coffee House Jobs</title>
+  <style>
+  h3
+  {
+    text-align:left;
+    padding-left: 30px;
+    font-weight: normal;
+    font-size: 90%;
+    font-family: cursive;
+  }
+  #leftcolumn
+  {
+    height: 400px;
+  }
+  #rightcolumn
+  {
+    height: 400px;
+  }
+  #jobform
+  {
+    text-align: center;
+  }
+  table
+  {
+    margin:auto;
+  }
+  td:nth-of-type(even)
+  {
+    text-align:left;
+  }
+  td:nth-of-type(odd)
+  {
+    text-align:right;
+  }
+  td
+  {
+    vertical-align: top;
+  }
+  </style>
+  </head>
+  <body>
+	<div id="wrapper">
+		<div>
+			<h1>
+				<img src="javalogo.gif">
+			</h1>
+		</div>
+		<div id="leftcolumn"><nav id="leftcolumn">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="music.html">Music</a></li>
+					<li><a href="jobs.html">Jobs</a></li>
+				</ul>
+		</div></nav>
+		<div id="rightcolumn">
+			<div class="content">
+				<h2 id="contenttitle">
+					Jobs at JavaJam
+				</h2>
+				<div>
+          <h3>
+            Want to work at JavaJam? Fill out the form below to start your applicated.<br>
+            Required fields are marked with an asterisk *.
+          </h3>
+          <form action="show_post.php" method="post" id="jobform" onsubmit="return validateform()">
+            <fieldset>
+              <legend>Personal Information</legend>
+              <table border="0" style="margin-left:0px">
+                <label><tr><td>*Name:</td>
+                <td><input type="text" name="Name"  id="nameid" required placeholder = "enter name here" onchange="validatename()"><br><br></td></tr></label>
+                <label for="Email"><tr><td>*E-mail:</td>
+                <td><input type="text" name="Email" id="Emailid" required placeholder = "enter email here" onchange="validateemail()"><br><br></td></tr></label>
+                <label><tr><td>Start Date:</td>
+                <td><input type="date" name="Date"  id="Dateid" placeholder = "enter date here" onchange="validatedate()"><br><br></td></tr></label>
+                <label><tr><td>*Experience:</td>
+                <td><textarea type="textarea" name="experience" rows="2" cols="30" required></textarea><br><br></td></tr></label>
+                <label><tr><td colspan="2" style="text-align:left;"><input type="submit" value="Apply Now"><td></tr></label>
+              </table>
+           </fieldset>
+          </form>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<small><i>Copyright &copy; 2014 JavaJam Coffee House <br> <a href="mailto:Ken_Zi@Teo.com">Ken_Zi@Teo.com</i></small></a>
+		</footer>
+	</div>
+  <script src="jobscript.js"></script>
+  </body>
+</html>

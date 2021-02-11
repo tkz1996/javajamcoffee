@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+  <title>JavaJam Coffee House Menu</title>
+  <style>
+  table
+  {
+    margin: auto; width: 600px; border-spacing: 0;
+  }
+  td, th
+  {
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    border-style: none;
+    border:1px solid white;
+    text-align: left;
+  }
+  tr:nth-of-type(4n-3)
+  {
+    background-color: rgb(204,170,102);
+  }
+  tr:nth-of-type(4n-2)
+  {
+    background-color: rgb(204,170,102);
+  }
+  #menu
+  {
+    padding: 20px;
+  }
+  table.menutable td
+  {
+    border-bottom-color: inherit;
+    border-bottom: 0px;
+    border-width: 0px;
+    border-right-width: 1px;
+  }
+  #leftcolumn
+  {
+    height: 350px;
+  }
+  #rightcolumn
+  {
+    height: 350px;
+  }
+  </style>
+  </head>
+  <body>
+	<div id="wrapper">
+		<div>
+			<h1>
+				<img src="javalogo.gif">
+			</h1>
+		</div>
+		<div id="leftcolumn"><nav id="leftcolumn">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="music.html">Music</a></li>
+					<li><a href="jobs.html">Jobs</a></li>
+				</ul>
+		</div></nav>
+		<div id="rightcolumn">
+			<div class="content">
+				<h2 id="contenttitle">
+					Coffee at JavaJam
+				</h2>
+				<div id="menu">
+          <table border="0" class="menutable">
+          	<tr>
+              <td rowspan ="2" style="text-align:center">Just Java</td>
+          		<td rowspan="1">Regular house blend, decaffeinated coffee, or flavor of the day.</td>
+              <td rowspan="1" border="1">Quantity:</td>
+              <td rowspan="1">Subtotal:</td>
+            </tr>
+            <tr>
+              <td rowspan="1">Endless Cup $2.00</td>
+              <td rowspan="1"><input type="number" id="javaquantity" name="javaquantity" min="0" max="999" step="1" onchange=javacalc()></td>
+              <td rowspan="1"><div id=javatotal value=0></div></td>
+          	</tr>
+          	<tr>
+              <td rowspan="2" style="text-align:center">Cafe au Lait</td>
+          		<td rowspan="1">House blended coffee infused into a smooth, steamed milk.</td>
+              <td rowspan="1">Quantity:</td>
+              <td rowspan="1">Subtotal:</td>
+            </tr>
+            <tr>
+              <td rowspan="1">
+                <input type="radio" id="caferadios" name="caferadio" value=0><label>Single $2.00</label>
+                <input type="radio" id="caferadiol" name="caferadio" value=1><label>Double $3.00</label>
+              </td>
+              <td rowspan="1"><input type="number" id="cafequantity" name="cafequantity" min="0" max="999" step="1" onchange=cafecalc()></td>
+              <td rowspan="1"><div id=cafetotal value=0></div></td>
+            </tr>
+          	<tr>
+              <td rowspan="2" style="text-align:center">Iced Cuppucino</td>
+          		<td rowspan="1">Sweetened espresso blended with icy-cold milk and served in a chilled glass.</td>
+              <td rowspan="1">Quantity:</td>
+              <td rowspan="1">Subtotal:</td>
+            </tr>
+            <tr>
+              <td rowspan="1">
+                <input type="radio" id="icedradios" name="icedradio" value=0><label>Single $4.75</label>
+                <input type="radio" id="icedradiol" name="icedradio" value=1><label>Double $5.75</label>
+              </td>
+              <td rowspan="1"><input type="number" id="icedquantity" name="icedquantity" min="0" max="999" step="1" onchange=icedcalc()></td>
+              <td rowspan="1"><div id=icedtotal value=0></div></td>
+          	</tr>
+            <tr>
+              <td colspan="3" style="text-align:right;">
+                <button onclick="totalcalc()">Total Price:</button>
+              </td>
+              <td colspan="1" style="text-align:center;">
+                <div id=totalcost></div>
+              </td>
+            </tr>
+          </table>
+				</div>
+			</div>
+		</div>
+		<footer >
+			<small><i>Copyright &copy; 2014 JavaJam Coffee House <br> <a href="mailto:Ken_Zi@Teo.com">Ken_Zi@Teo.com</i></small></a>
+		</footer>
+	</div>
+  <script src="menuscript.js"></script>
+  </body>
+</html>
